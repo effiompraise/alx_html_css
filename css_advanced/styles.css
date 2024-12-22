@@ -3,10 +3,157 @@
     --white: #ffffff;
     --purple: #c271ff;
     --black: #071629;
+    --purple-var: #CC5ED5;
 }
 
 /* General Styles */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background: url(./assets/background.jpg);
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-sizing: border-box;
+    font-family: Source Sans Pro, sans-serif;
+}
+
+main {
+    overflow: hidden;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    margin: 10px;
+    color: var(--white);
+    text-align: center;
+}
+
+.h1-hero {
+    font-weight: 900;
+    font-size: 9vmax;
+    line-height: 1;
+    font-weight: bolder;
+    padding-top: 120px;
+}
+
+.hero-span {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 15rem;
+    padding-top: 15px;
+    margin: auto;
+}
+
+.first-button {
+    cursor: pointer;
+    background-color: var(--purple);
+    color: var(--white);
+    font-size: 16px;
+    padding: 10px 20px;
+    margin-top: 30px;
+    border-radius: 50px; /* Optional, for rounded corners */
+    margin: auto;
+    border: none;
+    margin-top: 30px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 10px 20px 0 rgba(0,0,0,0.19); /* Prominent shadow */
+    transition: box-shadow 0.3s ease, transform 0.3s ease; /* Smooth hover effects *//
+}
+
+.container {
+    display: flex;
+    gap: 100px;
+}
+
+.lighter {
+    font-weight: lighter;
+}
+
+.learn {
+    color: var(--purple)
+}
+
+h2 {
+    padding-top: 11rem;
+    padding-bottom: 3rem;
+}
+
+.namePros {
+    padding: 10px 0 10px 0;
+}
+
 /* Nav Styles */
+
+nav {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 100px;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-between;
+    width: 20%;
+    margin: auto;
+    margin-right: 150px;
+}
+
+nav ul li{
+    list-style: none;
+    margin: 0 15px;
+    padding-top: 40px;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--white);
+}
+
+nav a:hover {
+    color: blue;
+    cursor: pointer;
+}
+
+.logoTop {
+    padding: 55px 20px 20px 45px;
+}
+
+.purple {
+    background-color: var(--purple);
+    height: 392px;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-size: 100px;
+}
 /* Button Styles */
+
+.first-button:hover {
+    background-color: var(--purple-var);
+}
 /* Container Styles */
+
+
+
 /* Image Styles */
+
+.pros {
+    border-radius: 50%;
+}

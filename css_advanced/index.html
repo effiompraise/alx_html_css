@@ -4,13 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/4a2b055604.js" crossorigin="anonymous"></script>
-    <title>Smile School Project</title>
+    <title>Smile School Project | CSS Advanced</title>
     <link href="styles.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
         <nav>
-            <img src="https://fakeimg.pl/250x250?text=Sample+Logo" alt="logo">
+            <a href="index.html"><img class="logoTop" src="./assets/logo.png" alt="logo"></a>
           
             <ul>
                 <li><a href="#">COURSE</a></li>
@@ -23,45 +26,47 @@
     <main>
         <section>
             <div>
-                <h1>Get schooled</h1>
+                <h1 class="h1-hero">Get schooled</h1>
+                <div class="hero-span">
                 <span>SMILES</span>
                 <span>GRIN</span>
                 <span>LAUGH</span>
-                <button>REGISTER FOR FREE</button>
+                </div><br>
+                <button class="first-button">REGISTER FOR FREE</button>
             </div>
             <div>
-                <h2>Learn from the pros</h2>
-                <div>
-                    <div>
-                        <img src="./images/1 (3).png" alt="">
-                        <h3>Phillip Massey</h3>
-                        <p>« Smile of the year » 2018 - 2019</p>
+                <h2><span class="learn">Learn</span> <span class="lighter">from the pros</span></h2>
+                <div class="container">
+                    <div class="hero-img">
+                        <img class="pros" src="./assets/Philip Massey.png" alt="">
+                        <h3 class="namePros">Phillip Massey</h3>
+                        <p><em>« Smile of the year »<br> 2018 - 2019</em></p>
                     </div>
                     <div>
-                        <img src="./images/6.png" alt="">
-                        <h3>Nannie Lawrence</h3>
-                        <p>Best « little smile » 2017</p>
+                        <img class="pros" src="./assets/Nannie.png" alt="">
+                        <h3 class="namePros">Nannie Lawrence</h3>
+                        <p><em>Best « little smile »<br> 2017</em></p>
                     </div>
                     <div>
-                        <img src="./images/7.png" alt="">
-                        <h3>Bruce Walters</h3>
-                        <p>Best « Friend Smile » live performance 2019</p>
+                        <img class="pros" src="./assets/suit guy.png" alt="">
+                        <h3 class="namePros">Bruce Walters</h3>
+                        <p><em>Best « Friend Smile »<br> live performance 2019</em></p>
                     </div>
                     <div>
-                        <img src="./images/8.png" alt="">
-                        <h3>Henry Hughes</h3>
-                        <p>« 24h smiles » winner 2016 - 2019</p>
+                        <img class="pros" src="./assets/Henry.png" alt="">
+                        <h3 class="namePros">Henry Hughes</h3>
+                        <p><em>« 24h smiles » winner<br> 2016 - 2019</em></p>
                     </div>
                 </div>
             </div>
         </section>
-        <section>
+        <section class="purple">
             <div>
-                <img src="./images/Bitmap.png" alt="image">
+                <img class="pros" src="./assets/weather_presenter.png" alt="image">
             </div>
             <div>
                 <blockquote>« Those tutorials are concise and go straight to the point. I can’t think of a better place to learn smiling. And it’s so fun!</blockquote>
-                <h3>NAME</h3>
+                <h3>Andre Lukeman</h3>
                 <P>weather presenter</P>
             </div>
         </section>
@@ -198,14 +203,14 @@
     <footer>
         <section>
             <div>
-                <img src="https://fakeimg.pl/250x250?text=Sample+Logo" alt="logo">
+                <img class="logoBottom" src="./assets/logo.png" alt="logo">
                 <div>
                     <i class="fa-brands fa-facebook"></i>
                     <i class="fa-brands fa-twitter"></i>
                     <i class="fa-brands fa-instagram"></i>
                 </div>
             </div>
-            <p>&copy; smileschool 2020</p>
+            <p>&copy; smileschool 2024</p>
         </section>
     </footer>
 </body>
