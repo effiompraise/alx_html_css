@@ -242,6 +242,76 @@ h4 {
     color: var(--greyish);
 }
 
+.section4-container {
+    display: flex;
+    background-color: var(--black);
+    width: 100%;
+    flex-direction: column;
+    align-items: center;  /* Center children horizontally */
+    justify-content: center;  /* Center children vertically */
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    gap: 30px;
+    height: 502px;  /* Ensure it takes full viewport height */
+  }
+  
+  .section4-container h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 0;
+  }
+  
+  .features-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px; /* Optional: Limit max width */
+    justify-items: center; /* Ensures content inside grid items is centered */
+  }
+  
+  .feature {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .feature img {
+    width: 50px; /* Adjust as needed */
+    height: 50px;
+    object-fit: contain;
+  }
+  
+  .feature h3 {
+    font-size: 1.5rem;
+    margin: 0;
+  }
+  
+  .feature p {
+    font-size: 1rem;
+    margin: 0;
+  }
+  
+  button {
+    padding: 14px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #fff;
+    background-color: var(--purple); /* Adjust color */
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    margin-top: 20px;
+    margin-bottom: 100px;
+  }
+  
+  button:hover {
+    background-color: var(--purple-var); /* Darker hover effect */
+  }
+  
+
 /* Image Styles */
 
 .pros {
