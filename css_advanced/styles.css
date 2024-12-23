@@ -310,6 +310,106 @@ h4 {
   button:hover {
     background-color: var(--purple-var); /* Darker hover effect */
   }
+
+  /* Center the h2 at the top */
+.faq {
+    text-align: center;  /* Center the text */
+    margin: 0; /* Optional: adds spacing above the h2 */
+    color: var(--black);
+    font-weight: lighter;
+    font-size:xx-large;
+    font-family: Source Sans Pro;
+  }
+  
+  /* Use Flexbox to create two columns */
+  .faq-columns {
+    display: flex;
+    justify-content: space-between; /* Spread columns evenly */
+    margin-top: 30px;
+    gap: 100px; /* Optional: space between the two columns */
+    text-align: left;
+  }
+  
+  /* Each column */
+  .column {
+    width: 48%; /* Adjust width to create two columns */
+  }
+  
+  /* Ensure that each <h3> stays in a block format */
+  .how {
+    margin-bottom: 10px; /* Add space below each h3 */
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--black);
+  }
+  
+  /* Style for the lorem-desc paragraphs */
+  .lorem-desc {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 20px; /* Add space between each paragraph */
+  }
+  
+  /* Optional: Style the entire section */
+  .section5-container {
+    padding: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+/* Style for the footer */
+footer {
+    background-color: var(--black);  /* Footer background */
+    color: var(--greyish);  /* White text color */
+    padding: 80px 0;  /* Add padding for spacing */
+    position: relative;  /* Ensure positioning works for absolute elements */
+    text-align: center;
+  }
+  
+  /* Footer top section */
+  .footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 70px;
+    position: relative;
+  }
+  
+  /* Logo styling */
+  .footer-top .logoBottom {
+    height: 30px;  /* Adjust logo size */
+    padding-left: 15rem;
+    margin: 0;
+  }
+  
+  /* Social media icons */
+  .footer-top .social-media i {
+    margin-left: 15px;  /* Space between icons */
+    font-size: 20px;  /* Adjust icon size */
+    color: white;  /* Set icons to white */
+    transition: color 0.3s;
+    padding-left: 20px;
+    
+  }
+
+  .social-media {
+    padding-right: 20rem;
+    margin: 0;
+  }
+  
+  /* Hover effect for icons */
+  .footer-top .social-media i:hover {
+    color: #ddd;  /* Lighten color on hover */
+  }
+  
+  /* Copyright section */
+  footer p {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    margin: 0;
+  }
   
 
 /* Image Styles */
