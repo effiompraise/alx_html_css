@@ -1,0 +1,1 @@
+# In this Project I designed a website from scratch using just raw CSS/HTMl. No external framework was used! The site was made responsive to appear good on both mobile and desktop devices.
