@@ -1,0 +1,419 @@
+/* colours for the page */
+:root {
+    --white: #ffffff;
+    --pink: #ff6565;
+    --black: #071629;
+    --button-hover: #FF3333;
+}
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 500px;
+  font-family: Source-Sans-Pro, sans-serif;
+  background-image: url("./assets/headphones_hero_1.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  box-sizing: border-box;
+}
+
+main {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  color: var(--white);
+  text-align: center;
+  }
+
+ 
+
+.nav-bar {
+  width: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-shrink: 0;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  list-style: none;
+  padding: 12px 20px;
+  gap: 30rem;
+}
+
+.hero-container {
+  display: flex;
+  padding-top: 200px;
+  padding-bottom: 300px;
+  margin-top: 0px;
+}
+
+/* General layout for .whatwedo-container */
+.whatwedo-container {
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  text-align: center;
+  padding-top: 3000px; /* Add spacing around the container */
+  margin-top: 50px; /* Ensure clear separation from the previous section */
+  color: var(--black); /* Text color for visibility */
+}
+
+.whatwedo-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+}
+
+.logo img {
+  height: 35px;
+  position: absolute;
+  margin-left: 10%;
+  
+}
+
+button {
+  background-color: var(--pink);
+}
+
+.hero-text {
+  color: var(--white);
+  padding-top: 10%;
+}
+
+.hero-text h1 {
+  font-size: 32px;
+  padding-bottom: 0;
+}
+
+.hero-text h1 p {
+  font-weight: lighter;
+}
+
+.hero-text h1 p button p {
+  font-weight: lighter;
+}
+
+.hero-text button {
+  color: var(--white);
+  padding: 15px 30px;
+  border-radius: 30px;
+  border: none;
+  margin-top: 20px;
+  margin-bottom: 50px;
+  font-weight: bolder;
+}
+
+.hero-text button:hover {
+  background-color: var(--button-hover);
+}
+  
+.hero-image .hero-text {
+  text-align: center;
+}
+
+.menu {
+  display: flex;
+  margin-right: 12rem;
+}
+
+.menu li {
+  padding-top: 30px;
+  padding-left: 30px;
+}
+
+.menu li a {
+  display: inline-block;
+  text-decoration: none;
+  color: var(--white);
+  text-align: center;
+  position: relative;
+  transition: 0.15s ease-in-out;
+}
+
+.menu li a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: var(--white);
+  transition: 0.15s ease-in-out;
+}
+
+.menu li a:hover:after {
+  width: 100%;
+  background-color: var(--button-hover)
+}
+
+.open-menu, .close-menu {
+  position: absolute;
+  color: var(--white);
+  cursor: pointer;
+  font-size: 1.5rem;
+  display: none;
+}
+
+.open-menu {
+  top: 100%;
+  right: 20px;
+  transform: translateY(-50%);
+}
+
+.close-menu {
+  top: 20px;
+  right: 20px;
+}
+
+#check {
+  display: none;
+}
+
+@media (max-width: 610px) {
+
+  .menu {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 100%;
+    width: 80%;
+    z-index: 100;
+    background-color:black;
+    opacity: 0.9;
+    transition: all 0.2s ease-in-out;
+  }
+
+  .menu li {
+    margin-top: 40px;
+  }
+
+  .menu li a {
+    padding: 10px;
+  }
+
+  .open-menu, .close-menu {
+    display: block;
+  }
+
+  #check:checked ~ .menu {
+    right: 0;
+  }
+
+  body {
+    height: 100vh;
+    background-position: 40% 75%;
+  }
+  
+  .hero-text h1 {
+    font-size: 32px;
+    font-style: normal;
+    font-weight: bold;
+  }
+
+  .hero-container {
+    display: flex;
+    padding-top: 60px;
+    margin-top: 58%;
+    padding-bottom: 50%;
+    text-align: center;
+    text-wrap: break-word;
+  }
+
+
+  .whatwedo-container {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 100px;
+    padding-top: 30px;
+    gap: 10px;
+  }
+
+  .glyph {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
+
+
+/* Desktop and Tablet */
+@media (min-width: 611px) and (max-width: 1024px) {
+    /* Hero Section */
+    .hero-container {
+        padding-top: 150px;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* Navigation Bar: Center it properly */
+    .nav-bar {
+        display: flex;
+        justify-content: center; /* Center align navigation items */
+        align-items: center;
+        gap: 2rem; /* Adjust spacing between nav items */
+        width: 100%;
+    }
+
+    .nav-container {
+        width: 100%;
+        padding: 0 20px; /* Add padding to prevent elements from touching the sides */
+    }
+
+    .logo img {
+        height: 35px;
+    }
+
+    /* "What We Do" Section */
+    .whatwedo-container {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 20px;
+        padding: 40px;
+        margin-top: 50px; /* Add margin to create space between sections */
+        color: var(--black);
+        width: 100%;
+    }
+
+    /* Adjust glyph width for desktop and tablet */
+    .glyph {
+        width: 200px; /* Adjust the width for better layout */
+    }
+
+    /* Adjust icon sizes */
+    .glyph span {
+        font-size: 60px; /* Increase font size for tablet */
+    }
+
+    /* Center the "What We Do" section and provide padding */
+    .whatwedo-container p {
+        text-align: center;
+        margin-bottom: 30px; /* Space between paragraph and icons */
+        font-size: 18px; /* Adjust text size */
+    }
+}
+
+/* Desktop Specific */
+@media (min-width: 1024px) {
+    .hero-container {
+        padding-top: 150px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    /* Separate "What We Do" section on desktop */
+    .whatwedo-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        padding: 80px 100px;
+        margin-top: 80px; /* Increase spacing from the hero section */
+        width: 80%; /* Add width restriction to center the content */
+    }
+
+    .whatwedo-content {
+      gap: 60px;
+    }
+
+    /* Adjust icon sizes for desktop */
+    .glyph span {
+        font-size: 80px; /* Larger font for desktop */
+    }
+}
+
+
+
+@font-face {
+  font-family: 'holberton_school-icon';
+  src:  url('fonts/holberton_school-icon.eot');
+  src:  url('fonts/holberton_school-icon.eot') format('embedded-opentype'),
+    url('fonts/holberton_school-icon.ttf') format('truetype'),
+    url('fonts/holberton_school-icon.woff') format('woff'),
+    url('fonts/holberton_school-icon.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: inline-block;
+}
+
+[class^="holberton_school-icon-"], [class*=" holberton_school-icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'holberton_school-icon' !important;
+  speak-as: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+.holberton_school-icon-ic_hearing:before {
+  content: "\e909";
+}
+
+.holberton_school-icon-ic_music:before {
+  content: "\e90d";
+}
+.holberton_school-icon-ic_sound:before {
+  content: "\e90e";
+}
+
+.holberton_school-icon-ic_video:before {
+  content: "\e910";
+}
+
+
+.glyph {
+  text-align: center;
+  width: 200px;
+  
+}
+
+.glyph span {
+  font-size: 100px;
+  color: var(--pink);
+  margin-bottom: 10px;
+  display: block;
+}
+
+.glyph p {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-top: 10px;
+  color: var(--black)
+}
+.clearfix:before, .clearfix:after {
+  content: " ";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+}
+
+.fs1 {
+  font-size: 32px;
+}

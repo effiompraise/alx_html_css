@@ -3,95 +3,37 @@
     --white: #ffffff;
     --pink: #ff6565;
     --black: #071629;
-    --hover: #FF6565;
+    --button-hover: #FF3333;
+}
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
   width: 100%;
-  height: 100vh;
+  height: 50%;
   font-family: Source-Sans-Pro, sans-serif;
   background-image: url("./assets/headphones_hero_1.jpg");
   background-size: cover;
-  height: 50%;
-  margin: 0;
-  background-position: left top;
+  background-position: center;
   background-repeat: no-repeat;
-  position: relative;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+nav {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
+  position: relative;
+
+
 }
-
-.logo img {
-  height: 35px;
-  position: absolute;
-  margin-right: 100%;
-}
-
-@media (min-width: 481px) and (max-width: 480px) {
-  body {
-    width: 100%;
-    background-position: center;
-  }
-}
-
-@media (max-width: 600px) {
-  .logo img {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .menu {
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 80%;
-    height: 100vh;
-    position: fixed;
-    top: 0;
-    right: -100%;
-    z-index: 100;
-    background-color: none;
-    transition: all 0.2s ease-in-out;
-  }
-
-  .open-menu, .close-menu {
-    display: block;
-  }
-
-  #check:checked ~ .menu {
-    right: 0;
-  }
-}
-
-button {
-  background-color: var(--pink);
-}
-
-.hero-text {
-  color: var(--white);
-  padding-top: 60%;
-}
-
-.hero-text h1 {
-  font-size: 32px;
-  padding-bottom: 0;
-}
-
-.hero-text button {
-  color: var(--white);
-  padding: 10px 30px;
-  border-radius: 30px;
-  border: none;
-  margin-top: 20px;
-  margin-bottom: 50px;
-}
-  
-.hero-image .hero-text {
-  text-align: center;
-}
-
 .nav-bar {
   width: 100%;
   display: flex;
@@ -100,11 +42,60 @@ button {
   position: relative;
   list-style: none;
   padding: 12px 20px;
+  background-color: none;
+}
+
+.logo img {
+  height: 35px;
+  position: absolute;
   margin-left: 10%;
+  
+}
+
+button {
+  background-color: var(--pink);
+}
+
+.hero-text {
+  color: var(--white);
+  padding-top: 10%;
+}
+
+.hero-text h1 {
+  font-size: 32px;
+  padding-bottom: 0;
+}
+
+.hero-text h1 p {
+  font-weight: lighter;
+}
+
+.hero-text h1 p button p {
+  font-weight: lighter;
+}
+
+.hero-text button {
+  color: var(--white);
+  padding: 15px 30px;
+  border-radius: 30px;
+  border: none;
+  margin-top: 20px;
+  margin-bottom: 50px;
+  font-weight: bolder;
+}
+
+.hero-text button:hover {
+  background-color: var(--button-hover);
+}
+  
+.hero-image .hero-text {
+  text-align: center;
 }
 
 .menu {
   display: flex;
+  margin-left: 12rem;
+  position: absolute;
 }
 
 .menu li {
@@ -118,6 +109,7 @@ button {
   color: var(--white);
   text-align: center;
   position: relative;
+  transition: 0.15s ease-in-out;
 }
 
 .menu li a::after {
@@ -125,7 +117,7 @@ button {
   position: absolute;
   bottom: 0;
   left: 0;
-  width: 0;
+  width: 100%;
   height: 1px;
   background-color: var(--white);
   transition: 0.15s ease-in-out;
@@ -133,17 +125,19 @@ button {
 
 .menu li a:hover:after {
   width: 100%;
+  background-color: var(--button-hover)
 }
 
 .open-menu, .close-menu {
-  position: relative;
+  position: absolute;
   color: var(--white);
   cursor: pointer;
   font-size: 1.5rem;
+  display: none;
 }
 
 .open-menu {
-  top: 50%;
+  top: 100%;
   right: 20px;
   transform: translateY(-50%);
 }
@@ -155,4 +149,62 @@ button {
 
 #check {
   display: none;
+}
+
+@media (max-width: 610px) {
+
+  .menu {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 100%;
+    width: 80%;
+    z-index: 100;
+    background-color:black;
+    opacity: 0.9;
+    transition: all 0.2s ease-in-out;
+  }
+
+  .menu li {
+    margin-top: 40px;
+  }
+
+  .menu li a {
+    padding: 10px;
+  }
+
+  .open-menu, .close-menu {
+    display: block;
+  }
+
+  #check:checked ~ .menu {
+    right: 0;
+  }
+
+  body {
+    height: 100vh;
+    background-position: 40% 75%;
+  }
+  
+  .hero-text h1 {
+    font-size: 32px;
+    font-style: normal;
+    font-weight: bold;
+  }
+
+  .hero-container {
+    margin-top: 68%;
+    text-align: center;
+    text-wrap: break-word;
+  }
+}
+
+@media (min-width: 611px) {
+  body {
+    width: 100%;
+    height: 50%;
+  }
 }
